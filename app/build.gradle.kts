@@ -6,7 +6,7 @@ import java.util.TimeZone
 
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.leavesczy.trace)
 }
 
@@ -15,8 +15,8 @@ android {
     compileSdk = 34
     defaultConfig {
         applicationId = "github.leavesczy.trace"
-        minSdk = 23
-        targetSdk = 33
+        minSdk = 21
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -94,20 +94,20 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
+        kotlinCompilerExtensionVersion = libs.versions.androidx.compose.compiler.get()
     }
 }
 
 dependencies {
-    testImplementation(libs.test.junit)
-    androidTestImplementation(libs.test.androidx.junit)
-    androidTestImplementation(libs.test.androidx.espresso)
+    testImplementation(libs.junit.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.activity.compose)
-    implementation(libs.google.material)
-    val composePlatform = platform(libs.compose.bom)
+    val composePlatform = platform(libs.androidx.compose.bom)
     implementation(composePlatform)
-    implementation(libs.compose.material3)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.google.material)
 }
 
 viewClickTrace {

@@ -1,9 +1,9 @@
 @file:Suppress("UnstableApiUsage")
 
 plugins {
-    alias(libs.plugins.kotlin.jvm)
-    alias(libs.plugins.plugin.publish)
-    id(libs.plugins.java.library.get().pluginId)
+    alias(libs.plugins.jetbrains.kotlin.jvm)
+    alias(libs.plugins.gradle.plugin.publish)
+    id("java-library")
 }
 
 java {
@@ -14,7 +14,7 @@ java {
 }
 
 group = "io.github.leavesczy"
-version = "0.0.5"
+version = "0.0.6-beta01"
 
 gradlePlugin {
     website.set("https://github.com/leavesCZY/Trace")
@@ -33,5 +33,5 @@ gradlePlugin {
 dependencies {
     compileOnly(libs.android.gradle)
     compileOnly(libs.android.gradle.api)
-    compileOnly(libs.asm.commons)
+    compileOnly(libs.ow2.asm.commons)
 }
