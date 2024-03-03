@@ -76,7 +76,7 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    packagingOptions {
+    packaging {
         resources {
             excludes += setOf(
                 "**/*.md",

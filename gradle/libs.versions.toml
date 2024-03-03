@@ -1,6 +1,6 @@
 [versions]
-android-plugin = "7.4.2"
-kotlin-plugin = "1.8.22"
+android-plugin = "8.3.0"
+kotlin-plugin = "1.9.22"
 gradle-plugin-publish-plugin = "1.2.1"
 leavesczy-trace-plugin = "1.0.0"
 
@@ -9,13 +9,13 @@ androidx-espresso = "3.5.1"
 androidx-appcompat = "1.6.1"
 androidx-activity-compose = "1.8.2"
 androidx-compose-bom = "2024.02.01"
-androidx-compose-compiler = "1.4.8"
+androidx-compose-compiler = "1.5.10"
+
+junit-junit = "4.13.2"
 
 google-material = "1.11.0"
 
 ow2-asm-commons = "9.6"
-
-junit-junit = "4.13.2"
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android-plugin" }
@@ -38,8 +38,8 @@ androidx-activity-compose = { module = "androidx.activity:activity-compose", ver
 androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "androidx-compose-bom" }
 androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
 
+junit-junit = { module = "junit:junit", version.ref = "junit-junit" }
+
 google-material = { module = "com.google.android.material:material", version.ref = "google-material" }
 
 ow2-asm-commons = { module = "org.ow2.asm:asm-commons", version.ref = "ow2-asm-commons" }
-
-junit-junit = { module = "junit:junit", version.ref = "junit-junit" }
