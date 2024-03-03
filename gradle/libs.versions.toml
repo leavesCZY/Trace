@@ -2,8 +2,7 @@
 android-plugin = "7.4.2"
 kotlin-plugin = "1.8.22"
 gradle-plugin-publish-plugin = "1.2.1"
-leavesczy-trace-plugin = "0.0.5"
-#leavesczy-trace-plugin = "0.0.5"
+leavesczy-trace-plugin = "1.0.0"
 
 androidx-junit = "1.1.5"
 androidx-espresso = "3.5.1"

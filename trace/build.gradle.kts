@@ -22,7 +22,7 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 group = "io.github.leavesczy"
-version = "0.0.5"
+version = "1.0.0"
 
 gradlePlugin {
     website.set("https://github.com/leavesCZY/Trace")
