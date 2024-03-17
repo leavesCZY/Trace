@@ -38,7 +38,7 @@ internal abstract class ComposeClickClassVisitorFactory :
 
     companion object {
 
-        const val ComposeClickClassName = "androidx.compose.foundation.ClickableKt"
+        const val COMPOSE_CLICK_CLASS_NAME = "androidx.compose.foundation.ClickableKt"
 
     }
 
@@ -53,7 +53,7 @@ internal abstract class ComposeClickClassVisitorFactory :
     }
 
     override fun isInstrumentable(classData: ClassData): Boolean {
-        return classData.className == ComposeClickClassName
+        return classData.className == COMPOSE_CLICK_CLASS_NAME
     }
 
 }
@@ -65,10 +65,10 @@ private class ComposeClickClassVisitor(
 
     private companion object {
 
-        private const val ClickableMethodDesc =
+        private const val CLICKABLE_METHOD_DESC =
             "(Landroidx/compose/ui/Modifier;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/foundation/Indication;ZLjava/lang/String;Landroidx/compose/ui/semantics/Role;Lkotlin/jvm/functions/Function0;)Landroidx/compose/ui/Modifier;"
 
-        private const val CombinedClickableMethodDesc =
+        private const val COMBINED_CLICKABLE_METHOD_DESC =
             "(Landroidx/compose/ui/Modifier;Landroidx/compose/foundation/interaction/MutableInteractionSource;Landroidx/compose/foundation/Indication;ZLjava/lang/String;Landroidx/compose/ui/semantics/Role;Ljava/lang/String;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)Landroidx/compose/ui/Modifier;"
 
     }
@@ -89,18 +89,18 @@ private class ComposeClickClassVisitor(
     override fun visitEnd() {
         super.visitEnd()
         LogPrint.normal(tag = "composeClickTrace") {
-            "找到 ${ComposeClickClassVisitorFactory.ComposeClickClassName} 类，完成处理..."
+            "找到 ${ComposeClickClassVisitorFactory.COMPOSE_CLICK_CLASS_NAME} 类，完成处理..."
         }
         accept(nextClassVisitor)
     }
 
     private fun hookComposeClick(methodNode: MethodNode) {
         val onClickArgumentIndex = when (methodNode.desc) {
-            ClickableMethodDesc -> {
+            CLICKABLE_METHOD_DESC -> {
                 6
             }
 
-            CombinedClickableMethodDesc -> {
+            COMBINED_CLICKABLE_METHOD_DESC -> {
                 9
             }
 

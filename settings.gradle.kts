@@ -1,11 +1,11 @@
 @file:Suppress("UnstableApiUsage")
 
 pluginManagement {
+    includeBuild("trace")
     repositories {
         google()
         mavenCentral()
         gradlePluginPortal()
-//        mavenLocal()
     }
 }
 
@@ -19,4 +19,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Trace"
 include(":app")
-include(":trace")

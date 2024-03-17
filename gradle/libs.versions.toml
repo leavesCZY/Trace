@@ -2,13 +2,12 @@
 android-plugin = "8.3.0"
 kotlin-plugin = "1.9.22"
 gradle-plugin-publish-plugin = "1.2.1"
-leavesczy-trace-plugin = "1.0.0"
 
 androidx-junit = "1.1.5"
 androidx-espresso = "3.5.1"
 androidx-appcompat = "1.6.1"
 androidx-activity-compose = "1.8.2"
-androidx-compose-bom = "2024.02.01"
+androidx-compose-bom = "2024.02.02"
 androidx-compose-compiler = "1.5.10"
 
 junit-junit = "4.13.2"
@@ -25,7 +24,7 @@ jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin-
 
 gradle-plugin-publish = { id = "com.gradle.plugin-publish", version.ref = "gradle-plugin-publish-plugin" }
 
-leavesczy-trace = { id = "io.github.leavesczy.trace", version.ref = "leavesczy-trace-plugin" }
+leavesczy-trace = { id = "io.github.leavesczy.trace", version = "unspecified" }
 
 [libraries]
 android-gradle = { module = "com.android.tools.build:gradle", version.ref = "android-plugin" }
