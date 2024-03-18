@@ -27,8 +27,7 @@ class ViewClickTraceActivity : AppCompatActivity() {
                 onClickView()
             }
         })
-        findViewById<TextView>(R.id.btnObject).setOnClickListener(object :
-            View.OnClickListener {
+        findViewById<TextView>(R.id.btnObject).setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View) {
                 onClickView()
             }
